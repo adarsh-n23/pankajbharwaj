@@ -1,198 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stock Learners</title>
-    <style>
-        * {
-            box-sizing: border-box
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Learners</title>
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: #080808;
-            color: #cbd5e1;
-            font-family: Arial, Helvetica, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 24px 14px
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        .container {
-            width: min(1100px, 100%);
-            min-height: 590px;
-            background: #111827;
-            border: 2px solid #d4c900;
-            box-shadow: 0 0 7px #d4c900;
-            padding: 42px 10px 26px;
-            display: flex;
-            flex-direction: column
-        }
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #080808;
+    color: #cbd5e1;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px 14px;
+}
 
-        .heading {
-            font-size: 16px;
-            font-weight: 700;
-            color: #55c8ff;
-            border: 1px solid #596171;
-            padding: 3px 0;
-            margin: 7px 0 15px
-        }
+.container {
+    width: min(1100px, 100%);
+    min-height: 590px;
+    background: #111827;
+    border: 2px solid #d4c900;
+    box-shadow: 0 0 7px #d4c900;
+    padding: 42px 10px 26px;
+    display: flex;
+    flex-direction: column;
+}
 
-        .profile-wrap {
-            display: flex;
-            justify-content: center;
-            margin: 0 auto 78px
-        }
+.heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #55c8ff;
+    border: 1px solid #596171;
+    padding: 3px 0;
+    margin: 7px 0 15px;
+}
 
-        .profile {
-            width: 148px;
-            height: 148px;
-            object-fit: cover;
-            border: 2px solid #e4df00;
-            background: #17652f
-        }
+.profile-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 78px;
+}
 
-        .info {
-            min-height: 106px;
-            background: #1b2346;
-            border: 1px solid #8c91a5;
-            box-shadow: 0 0 5px #aeb4c7;
-            margin: 0 0 16px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 18px 12px
-        }
+.profile {
+    width: 148px;
+    height: 148px;
+    object-fit: cover;
+    border: 2px solid #e4df00;
+    background: #17652f;
+}
 
-        .info h2 {
-            font-size: 16px;
-            color: #55c8ff;
-            margin: 0 0 24px
-        }
+.info {
+    min-height: 106px;
+    background: #1b2346;
+    border: 1px solid #8c91a5;
+    box-shadow: 0 0 5px #aeb4c7;
+    margin: 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 18px 12px;
+}
 
-        .info p {
-            font-size: 14px;
-            color: #8b91a5;
-            margin: 0
-        }
+.info h2 {
+    font-size: 16px;
+    color: #55c8ff;
+    margin: 0 0 24px;
+}
 
-        .join-row {
-            margin: 0 0 80px
-        }
+.info p {
+    font-size: 14px;
+    color: #8b91a5;
+    margin: 0;
+}
 
-        .join-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #087bea;
-            color: white;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            padding: 13px 22px;
-            border: 2px dotted #fff;
-            outline: 2px solid #d5c900;
-            box-shadow: 0 0 6px #d5c900;
-            border-radius: 3px;
-            transition: .2s
-        }
+.join-row {
+    margin: 0 0 80px;
+}
 
-        .join-btn:hover {
-            background: #0065c9;
-            transform: translateY(-2px)
-        }
+.join-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #087bea;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 13px 22px;
+    border: 2px dotted #fff;
+    outline: 2px solid #d5c900;
+    box-shadow: 0 0 6px #d5c900;
+    border-radius: 3px;
+    transition: .2s;
+}
 
-        .footer-info {
-            margin-bottom: 80px
-        }
+.join-btn:hover {
+    background: #0065c9;
+    transform: translateY(-2px);
+}
 
-        .disclaimer {
-            font-size: 13px;
-            line-height: 1.7;
-            color: #858b9d;
-            margin: 0
-        }
+.footer-info {
+    margin-bottom: 80px;
+}
 
-        @media(max-width:600px) {
-            body {
-                padding: 12px 8px
-            }
+.disclaimer {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #858b9d;
+    margin: 0;
+}
 
-            .container {
-                padding: 25px 9px 18px;
-                min-height: 100vh
-            }
+/* MOBILE RESPONSIVE DESIGN */
 
-            .profile-wrap {
-                margin-bottom: 55px
-            }
+@media(max-width:600px) {
 
-            .profile {
-                width: 130px;
-                height: 130px
-            }
+    body {
+        padding: 12px 8px;
+    }
 
-            .info {
-                min-height: 100px
-            }
+    .container {
+        padding: 25px 9px 18px;
+        min-height: 100vh;
+    }
 
-            .info h2 {
-                font-size: 15px;
-                margin-bottom: 16px
-            }
+    .heading {
+        font-size: 16px;
+    }
 
-            .join-row {
-                margin-bottom: 55px
-            }
+    .profile-wrap {
+        margin-bottom: 55px;
+    }
 
-            .footer-info {
-                margin-bottom: 55px
-            }
+    .profile {
+        width: 130px;
+        height: 130px;
+    }
 
-            .disclaimer {
-                font-size: 12px
-            }
-        }
-    </style>
+    .info {
+        min-height: 100px;
+    }
+
+    .info h2 {
+        font-size: 15px;
+        margin-bottom: 16px;
+    }
+
+    .info p {
+        font-size: 13px;
+    }
+
+    /* TELEGRAM BUTTON CENTER */
+
+    .join-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        margin: 0 0 55px;
+    }
+
+    .join-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-info {
+        margin-bottom: 55px;
+    }
+
+    .disclaimer {
+        font-size: 12px;
+    }
+}
+</style>
 </head>
 
 <body>
-    <main class="container">
-        <h1 class="heading">PANKAJ BHARDWAJ OFFICIAL</h1>
-        <div class="profile-wrap"><img class="profile"
-                src="https://cdn5.telesco.pe/file/uwtmnsi8f1bSQyQ1EhpKbbqH05o2Xa6SDFwmyc3LWWmXNgCdgV7wZQZj7t1Oi-qHS8Rjz1E-giUTEkcW-Q4JYyzBQ8kQ5ky0vm8bMAsLPvOC4KOarobnjX9t80CSwt5vaxUNbDnbv1lvUwFabcFcOlja9JKVDGdd4eEfF3oadnOv3EJJopEwPSg3cCe9zEiGZ8MrJ9Lowo261PCsQnxhBf-OAWCw7_PJvmF93ntxjUyK-7GgTkiXmpXvtE2jJAL52AG_CDsY2Nl7en4snKV-iGcR9VfXjO1PBbMjWDTl-v0foUfXHZ1v7JoexbYIHk1v9jLNmXm4mopi8ejaGb5cCQ.jpg"
-                alt="Stock Learners profile"></div>
-        <section class="info">
-            <h2>Market Insights &amp; Analysis</h2>
-            <p>Real-time market updates and expert discussions</p>
-        </section>
-        <div class="join-row"><a class="join-btn" id="telegramJoin" href="https://telegram.me/+1_DajKGuQMplYTE1"
-                target="_blank" rel="noopener noreferrer"><span aria-hidden="true">➤</span> JOIN NOW TELEGRAM</a></div>
-        <section class="info">
-            <h2>Learn Trading Strategies</h2>
-            <p>Investment | Share Market | Trading guidance</p>
-        </section>
-        <section class="info footer-info">
-            <h2>Practical Tips &amp; Tricks</h2>
-            <p>Actionable strategies and proven methods</p>
-        </section>
-        <p class="disclaimer">Disclaimer: This content is for educational purposes only and does not constitute
-            financial advice. Trading involves risk. Please do your own research before making investment decisions.</p>
-    </main>
-    <script>
-        // Replace this URL with your actual Telegram channel or group link.
-        const telegramUrl = 'https://telegram.me/+1_DajKGuQMplYTE1';
-        document.getElementById('telegramJoin').addEventListener('click', function (event) {
-            if (telegramUrl.includes('yourtelegramchannel')) { event.preventDefault(); alert('Please add your Telegram channel link in the JavaScript code.'); }
-            else { this.href = telegramUrl; }
-        });
-    </script>
-</body>
 
+<main class="container">
+
+    <h1 class="heading">STOCK LEARNERS</h1>
+
+    <div class="profile-wrap">
+        <img
+        class="profile"
+        src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgICAgMCAgIDAwMDBAYEBAQEBAgGBgUGCQgKCgkICQkKDA8MCgsOCwkJDRENDg8QEBEQCgwSExIQEw8QEBD/2wBDAQMDAwQDBAgEBAgQCwkLEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBD/wAARCACWAJgDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD86qKKK9g4gooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigDq/+Ep8G/wDRMdN/8GF7/wDHaP8AhKfBv/RMdN/8GF7/APHa5SilYdzq/wDhKfBv/RMdN/8ABhe//HaP+Ep8G/8ARMdN/wDBhe//AB2uUoosFzq/+Ep8G/8ARMdN/wDBhe//AB2j/hKfBv8A0THTf/Bhe/8Ax2uUoosFzq/+Ep8G/wDRMdN/8GF7/wDHaP8AhKfBv/RMdN/8GF7/APHa5SiiwXOr/wCEp8G/9Ex03/wYXv8A8do/4Snwb/0THTf/AAYXv/x2uUoosFzq/wDhKfBv/RMdN/8ABhe//HaK5SiiwXCiiimIKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/Z"
+        alt="Stock Learners profile">
+    </div>
+
+    <section class="info">
+        <h2>Market Insights &amp; Analysis</h2>
+        <p>Real-time market updates and expert discussions</p>
+    </section>
+
+    <div class="join-row">
+        <a
+        class="join-btn"
+        id="telegramJoin"
+        href="https://telegram.me/+1_DajKGuQMplYTE1"
+        target="_blank"
+        rel="noopener noreferrer">
+            <span aria-hidden="true">➤</span>
+            JOIN NOW TELEGRAM
+        </a>
+    </div>
+
+    <section class="info">
+        <h2>Learn Trading Strategies</h2>
+        <p>Investment | Share Market | Trading guidance</p>
+    </section>
+
+    <section class="info footer-info">
+        <h2>Practical Tips &amp; Tricks</h2>
+        <p>Actionable strategies and proven methods</p>
+    </section>
+
+    <p class="disclaimer">
+        Disclaimer: This content is for educational purposes only
+        and does not constitute financial advice. Trading involves
+        risk. Please do your own research before making investment
+        decisions.
+    </p>
+
+</main>
+
+<script>
+
+// TELEGRAM CHANNEL LINK
+const telegramUrl = 'https://telegram.me/+1_DajKGuQMplYTE1';
+
+document.getElementById('telegramJoin').addEventListener('click', function(event) {
+
+    if (telegramUrl.includes('yourtelegramchannel')) {
+        event.preventDefault();
+        alert('Please add your Telegram channel link in the JavaScript code.');
+    } else {
+        this.href = telegramUrl;
+    }
+
+});
+
+</script>
+
+</body>
 </html>
